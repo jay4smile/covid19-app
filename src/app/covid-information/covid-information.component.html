@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="login-form-flex container">
+    <mat-card style="text-align: center;">
+      <!-- <mat-card-title>
+        <button type="button" mat-button (click)= "fetchStateWiseData()" color="primary">State Wise</button>
+      </mat-card-title> -->
+      <mat-card-content>
+        <div *ngIf="chartData">
+        
+        <!-- <mat-form-field appearance="fill">
+            <mat-label>State</mat-label>
+            <select matNativeControl name="state" [formControl]="selectedState" >
+              
+              <option *ngFor="let state of chartData.statewise" [value]="state">{{state.state}}</option>
+            </select>
+          </mat-form-field> -->
+        <div>
+          <p-chart width="30vw" height="30vw" type="pie" [data]="pieData" [options]="pieData.options" (onDataSelect)="selectData($event)"></p-chart>
+        </div>
+
+        <div *ngIf="barChartData">
+          <p-chart width="70vw" height="30vw" type="bar" [data]="barChartData" [options]="barChartData.options" (onDataSelect)="selectData($event)"></p-chart>
+        </div>
+      </div>
+       </mat-card-content> 
+         
+    </mat-card>
+    </div>
