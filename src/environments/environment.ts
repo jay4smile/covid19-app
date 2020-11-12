@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  systemUrl: 'http://ec2-3-87-106-27.compute-1.amazonaws.com:8085'
+  systemUrl: 'http://ec2-3-86-138-12.compute-1.amazonaws.com:8085'
 };
 
 /*
